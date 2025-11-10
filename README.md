@@ -12,7 +12,7 @@ This repository contains a number of practical tasks and analytical projects aim
 ## Projects
 
 ### Project 1: Email Analytics and Account Dynamics 
-[View a SQL query]()  
+[View a SQL query](https://docs.google.com/document/d/1QUXVM-Cc6KNmyaLaGPXWmSHdN8rPljdV-tOMbZYpZL0/edit?usp=sharing)  
 An e-commerce database was used to perform the task, and queries were executed in BigQuery. As part of the project, a SQL query was developed to create a dataset to analyze the dynamics of account creation and user activity in emails (sending, opening, transitions).  
 Additionally, user behavior was analyzed by categories such as sending interval, account verification, and subscription status. Based on the results, user activity in different countries was compared, key markets were identified, and users were segmented by a number of parameters.  
 This SQL query has a multi-level structure with several CTEs (WITH blocks) that sequentially combine data from different tables into a single aggregated model. The query is built around the fact table email_sent(es), which serves as the core of the data model for this SQL query. JOIN/LEFT JOIN operators were used to create the dataset based on the SQL query.   
