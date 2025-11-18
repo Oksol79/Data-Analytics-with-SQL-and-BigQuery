@@ -93,6 +93,11 @@ Data Analysis Graph – Daily Revenue and Ad Cost (Fig. 1).
 
 Fig. 1. Daily Revenue and Ad Cost over time.
 
+The resulting graph "Daily Revenue & Advertising Cost" shows the daily dynamics of advertising revenue and costs for the period from November 1, 2020, to January 24, 2021.
+The results graph assesses the effectiveness of advertising risks and business profitability, for example, the level of revenue to costs, and trends.
+When you analyze the entire return on costs, you see whether advertising brings the expected result.
+Regarding trends, the graph allows you to assess specific relationships, such as whether revenue increases with rising advertising costs or remains steady despite changes in costs.
+If revenue is growing and costs remain stable, this is a sign of an effective strategy.
 
 ## Skills Demonstrated
 
