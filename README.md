@@ -5,8 +5,8 @@ This repository contains a number of practical tasks and analytical projects aim
 ## Table of Contents
 - [Projects](#projects)
   - [SQL query 1: Email Analytics and Account Dynamics](#sql-query-1-email-analytics-and-account-dynamics)
-  - [SQL query 2: : Session analysis](#sql-query-2--session-analysis)
-  - [SQL query 3: : Daily Revenue & Advertising Cost](#sql-query-3--daily-revenue--advertising-cost)
+  - [SQL query 2: Session analysis](#sql-query-2--session-analysis)
+  - [SQL query 3: Daily Revenue & Advertising Cost](#sql-query-3--daily-revenue--advertising-cost)
 - [Skills Demonstrated](#skills-demonstrated)
 - [Tools Used](#tools-used)
 - [Contact](#contact)
@@ -68,7 +68,7 @@ The graph in Fig. 1 shows the dynamics by date for the sent_msg field.
 
 Fig. 1. The dynamics by date for the sent_msg field.
 
-### SQL query 2: : Session analysis
+### SQL query 2: Session analysis
 [View a SQL query 2](https://docs.google.com/document/d/1C9qVZTdKhdjkMtM9nDOZaYBPhLp0DDmZYhK5_rq9lvQ/edit?usp=sharing)  
 
 This query was created to analyze all sessions during which purchases were made. Using the query, you can determine:
@@ -86,7 +86,7 @@ To achieve this, CASE WHEN created two categories: registered (for a user with a
 This allows you to answer the question: Do registered users generate more revenue on average per session?
 6. The number of sessions of each type (with and without an account), which helps to assess the traffic structure.
 
-### SQL query 3: : Daily Revenue & Advertising Cost
+### SQL query 3: Daily Revenue & Advertising Cost
 [View a SQL query 2](https://docs.google.com/document/d/1ESbVJ_-_fNmBelrGhRFHCkBbp898t7lkD7CTmGVl3Qo/edit?usp=sharing)  
 
 This SQL query aggregates daily revenue from products sold and daily advertising spend from paid search campaigns, then combines both datasets into a single table ready for analytics.
