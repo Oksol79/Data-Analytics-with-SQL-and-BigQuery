@@ -86,7 +86,7 @@ To achieve this, CASE WHEN created two categories: registered (for a user with a
 This allows you to answer the question: Do registered users generate more revenue on average per session?
 6. The number of sessions of each type (with and without an account), which helps to assess the traffic structure.
 
-<img width="1066" height="804" alt="image" src="https://github.com/user-attachments/assets/04531425-6cd6-44f5-8c94-40bd93303e89" />
+<img width="842" height="601" alt="image" src="https://github.com/user-attachments/assets/da76e64f-a98a-4a83-8ea1-2808854c9eb7" />
 
 Business conclusion. 
 The results show that Desktop generates the highest number of sessions among all devices. Desktop also brings in the highest revenue among both registered and unregistered users (guests). This means that the desktop audience is the most active and solvent.
