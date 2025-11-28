@@ -71,7 +71,8 @@ Fig. 1. The dynamics by date for the sent_msg field.
 ### SQL query 2: Session analysis
 [View a SQL query 2](https://docs.google.com/document/d/1C9qVZTdKhdjkMtM9nDOZaYBPhLp0DDmZYhK5_rq9lvQ/edit?usp=sharing)  
 
-This query was created to analyze all sessions during which purchases were made. Using the query, you can determine:
+This query was created to analyze all sessions during which purchases were made.   
+Using the query, you can determine:
 1. Was the session associated with registered users?
 To achieve this, CASE WHEN created two categories: registered (for a user with an account) and guest (for a user without an account).
 2. All purchases by device type. To find this out, the data is aggregated separately for mobile and desktop.
