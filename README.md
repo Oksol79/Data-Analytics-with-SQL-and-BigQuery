@@ -5,8 +5,9 @@ This repository contains a number of practical tasks and analytical projects aim
 ## Table of Contents
 - [Projects](#projects)
   - [SQL query 1: Email Analytics and Account Dynamics](#sql-query-1-email-analytics-and-account-dynamics)
-  - [SQL query 2: Session analysis](#sql-query-2--session-analysis)
-  - [SQL query 3: Daily Revenue & Advertising Cost](#sql-query-3--daily-revenue--advertising-cost)
+  - [SQL query 2: Session analysis](#sql-query-2-session-analysis)
+  - [SQL query 3: Daily Revenue & Advertising Cost](#sql-query-3-daily-revenue--advertising-cost)
+  - [SQL query 4: Session analysis](#sql-query-4)
 - [Skills Demonstrated](#skills-demonstrated)
 - [Tools Used](#tools-used)
 - [Contact](#contact)
@@ -110,7 +111,7 @@ To increase the number of registrations and revenue, it is recommended to:
   3. Optimize mobile conversion to purchase, in particular, improve the quality of traffic and UX flow.
 
 ### SQL query 3: Daily Revenue & Advertising Cost
-[View a SQL query 2](https://docs.google.com/document/d/1ESbVJ_-_fNmBelrGhRFHCkBbp898t7lkD7CTmGVl3Qo/edit?usp=sharing)  
+[View a SQL query 3](https://docs.google.com/document/d/1ESbVJ_-_fNmBelrGhRFHCkBbp898t7lkD7CTmGVl3Qo/edit?usp=sharing)  
 
 This SQL query aggregates daily revenue from products sold and daily advertising spend from paid search campaigns, then combines both datasets into a single table ready for analytics.
 The purpose of this SQL query is to provide a single, daily view of business performance by combining two key metrics:
@@ -143,6 +144,36 @@ When you analyze the entire return on costs, you see whether advertising brings 
 Regarding trends, the graph allows you to assess specific relationships, such as whether revenue increases with rising advertising costs or remains steady despite changes in costs.
 If revenue is growing and costs remain stable, this is a sign of an effective strategy.
 
+### SQL query 4: 
+[View a SQL query 4](<img width="1147" height="587" alt="image" src="https://github.com/user-attachments/assets/4ff3d725-566b-43ff-bd39-f97b171a6e92" />)  
+
+This query uses a subquery with a JOIN in BigQuery to identify sessions that have more than three events.
+The subquery groups all events by `ga_session_id` and selects only those sessions that have more than three events.
+The main query then joins these sessions back to the main table and counts only the `page_view` events that occurred within those sessions.
+The subquery is used to identify sessions with high user activity:
+SELECT
+      ga_session_id,
+      COUNT(*) AS total_events
+    FROM `DA.event_params`
+    GROUP BY ga_session_id
+    HAVING COUNT(*) > 3
+
+In it, all events from the event_params table are grouped by the ga_session_id field, after which the total number of events within each session is counted. The HAVING COUNT(*) > 3 condition selects only those sessions in which more than three events occurred.
+Thus, the subquery forms a list of ga_session_id only for "active" sessions (sessions with a high level of interaction).
+
+Then the main query:
+- joins these active sessions using JOIN;
+- filters events by type page_view;
+- counts how many page views (page_view) occurred in active sessions.
+Thus, the subquery acts as a filter, limiting the selection to only those sessions with a high level of interaction, and allows you to analyze page views only within them.
+
+
+
+### SQL query 5: 
+[View a SQL query 5]()
+
+### SQL query 6: 
+[View a SQL query 6]()
 ## Skills Demonstrated
 
 ## Tools Used
