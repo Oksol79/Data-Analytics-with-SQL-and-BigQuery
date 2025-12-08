@@ -170,7 +170,14 @@ Then the main query:
   
 Thus, the subquery acts as a filter, limiting the selection to only those sessions with a high level of interaction, and allows you to analyze page views only within them.
 
-This approach allows you to focus your analysis on the most engaged users and assess how intensively they interact with the page content.
+This approach allows you to focus your analysis on the most engaged users and assess how intensively they interact with the page content. This query demonstrates the use of:
+- subqueries;
+- aggregation (COUNT + GROUP BY);
+- filtering with HAVING;
+- JOINs;
+- event-based analytics.
+- 
+The query can be extended to analyze other types of events, compare active and inactive sessions, or calculate the average number of views per session.
 
 ### SQL query 5: 
 [View a SQL query 5]()
