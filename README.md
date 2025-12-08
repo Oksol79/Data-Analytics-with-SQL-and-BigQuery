@@ -167,7 +167,9 @@ Then the main query:
 - joins these active sessions using JOIN;
 - filters events by type page_view;
 - counts how many page views (page_view) occurred in active sessions.
+  
 Thus, the subquery acts as a filter, limiting the selection to only those sessions with a high level of interaction, and allows you to analyze page views only within them.
+
 This approach allows you to focus your analysis on the most engaged users and assess how intensively they interact with the page content.
 
 ### SQL query 5: 
