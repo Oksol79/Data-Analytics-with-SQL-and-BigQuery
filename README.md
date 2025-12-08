@@ -172,7 +172,7 @@ Thus, the subquery acts as a filter, limiting the selection to only those sessio
 
 This approach allows you to focus your analysis on the most engaged users and assess how intensively they interact with the page content. This query demonstrates the use of:
 - subqueries;
-- aggregation (COUNT + GROUP BY);
+- aggregation (COUNT, GROUP BY);
 - filtering with HAVING;
 - JOINs;
 - event-based analytics.
