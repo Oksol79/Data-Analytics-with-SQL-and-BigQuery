@@ -7,7 +7,7 @@ This repository contains a number of practical tasks and analytical projects aim
   - [SQL query 1: Email Analytics and Account Dynamics](#sql-query-1-email-analytics-and-account-dynamics)
   - [SQL query 2: Session analysis](#sql-query-2-session-analysis)
   - [SQL query 3: Daily Revenue & Advertising Cost](#sql-query-3-daily-revenue--advertising-cost)
-  - [SQL query 4: Session analysis](#sql-query-4)
+  - [SQL query 4: Filtering active sessions with a subquery](#sql-query-4)
 - [Skills Demonstrated](#skills-demonstrated)
 - [Tools Used](#tools-used)
 - [Contact](#contact)
@@ -144,19 +144,21 @@ When you analyze the entire return on costs, you see whether advertising brings 
 Regarding trends, the graph allows you to assess specific relationships, such as whether revenue increases with rising advertising costs or remains steady despite changes in costs.
 If revenue is growing and costs remain stable, this is a sign of an effective strategy.
 
-### SQL query 4: 
-[View a SQL query 4](<img width="1147" height="587" alt="image" src="https://github.com/user-attachments/assets/4ff3d725-566b-43ff-bd39-f97b171a6e92" />)  
+### SQL query 4: Filtering active sessions with a subquery
+[View a SQL query 4](https://docs.google.com/document/d/1ArgemVRPK9N3Mg-elkdBGjgQaxJ-G7Hlt3ZNCwcA4Is/edit?usp=drive_web&ouid=104269468961255412319)  
 
 This query uses a subquery with a JOIN in BigQuery to identify sessions that have more than three events.
 The subquery groups all events by `ga_session_id` and selects only those sessions that have more than three events.
 The main query then joins these sessions back to the main table and counts only the `page_view` events that occurred within those sessions.
+
 The subquery is used to identify sessions with high user activity:
-SELECT
-      ga_session_id,
-      COUNT(*) AS total_events
-    FROM `DA.event_params`
-    GROUP BY ga_session_id
-    HAVING COUNT(*) > 3
+
+SELECT  
+      ga_session_id,  
+      COUNT(*) AS total_events  
+    FROM `DA.event_params`  
+    GROUP BY ga_session_id  
+    HAVING COUNT(*) > 3  
 
 In it, all events from the event_params table are grouped by the ga_session_id field, after which the total number of events within each session is counted. The HAVING COUNT(*) > 3 condition selects only those sessions in which more than three events occurred.
 Thus, the subquery forms a list of ga_session_id only for "active" sessions (sessions with a high level of interaction).
