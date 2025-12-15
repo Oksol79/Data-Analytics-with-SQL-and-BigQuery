@@ -176,7 +176,7 @@ This approach allows you to focus your analysis on the most engaged users and as
 - filtering with HAVING;
 - JOINs;
 - event-based analytics.
-- 
+
 The query can be extended to analyze other types of events, compare active and inactive sessions, or calculate the average number of views per session.
 
 ### SQL query 5: 
