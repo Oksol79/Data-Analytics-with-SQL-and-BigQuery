@@ -7,7 +7,8 @@ This repository contains a number of practical tasks and analytical projects aim
   - [SQL query 1: Email Analytics and Account Dynamics](#sql-query-1-email-analytics-and-account-dynamics)
   - [SQL query 2: Session analysis](#sql-query-2-session-analysis)
   - [SQL query 3: Daily Revenue & Advertising Cost](#sql-query-3-daily-revenue--advertising-cost)
-  - [SQL query 4: Filtering active sessions with a subquery](#sql-query-4)
+  - [SQL query 4: Filtering active sessions with a subquery](#sql-query-4-filtering-active-sessions-with-a-subquery)
+  - [SQL query 5: Monthly Paid Search Cost vs Revenue](#sql-query-5-monthly-paid-search-cost-vs-revenue)
 - [Skills Demonstrated](#skills-demonstrated)
 - [Tools Used](#tools-used)
 - [Contact](#contact)
@@ -179,15 +180,30 @@ This approach allows you to focus your analysis on the most engaged users and as
 
 The query can be extended to analyze other types of events, compare active and inactive sessions, or calculate the average number of views per session.
 
-### SQL query 5: 
-[View a SQL query 5]()
+### SQL query 5: Monthly Paid Search Cost vs Revenue
+[View a SQL query 5](https://docs.google.com/document/d/13FhsXUunZHguI2sCe2DpiUhbCJH0XSUDiNHOCSI9sqg/edit?usp=sharing)
+
+This SQL query in Google BigQuery aggregates monthly paid search spend and actual order revenue, combining data from multiple sources, including ad spend, Google Analytics events, and order and product data.
+The query enables you to compare ad spend with revenue by year and month, even if only one side (ad spend or revenue) is available for individual months. To correctly display time periods, the SQL function COALESCE() is used, which returns the first non-NULL value and ensures that the results are correctly combined after a FULL OUTER JOIN.
+
+
 
 ### SQL query 6: 
 [View a SQL query 6]()
+
 ## Skills Demonstrated
+1. SQL for Analytics in Google BigQuery
+2. Building Complex Queries with CTE
+3. Aggregating and Transforming Event-Level Data
+4. Working with Time Dimensions (Year / Month)
+5. Combining Data from Multiple Sources
+6. Processing Incomplete Data (INNER JOIN, LEFT LOIN, FULL OUTER JOIN)
 
 ## Tools Used
-
+1. SQL (BigQuery)
+2. Google Analytics data model
+3. Marketing & Revenue analytics
+   
 ## Contact
 Feel free to connect with me via LinkedIn:  
 https://www.linkedin.com/in/oksana-olar-993709162/
