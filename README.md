@@ -186,6 +186,28 @@ The query can be extended to analyze other types of events, compare active and i
 This SQL query in Google BigQuery aggregates monthly paid search spend and actual order revenue, combining data from multiple sources, including ad spend, Google Analytics events, and order and product data.
 The query enables you to compare ad spend with revenue by year and month, even if only one side (ad spend or revenue) is available for individual months. To correctly display time periods, the SQL function COALESCE() is used, which returns the first non-NULL value and ensures that the results are correctly combined after a FULL OUTER JOIN.
 
+Query Logic:
+
+1. Aggregation of marketing costs.  
+In this part of the query, the year and month are extracted from the cost date, and the paid search costs are aggregated at the monthly level. The prepared data is used for further analysis.
+2. Revenue calculation.  
+Here, event-level data is converted into a monthly aggregation by combining Google Analytics events, orders, and products. The total revenue for each month is calculated.
+3. Data alignment.  
+Costs and revenue are combined using a FULL OUTER JOIN, which allows you to save all months in the result, even if data from one source is missing. The COALESCE function is used to correctly align time dimensions.
+
+Table 1 shows the output of the query, including revenues and costs by year and month.
+Table 1. - Revenues and Costs by Year and Month
+<img width="659" height="193" alt="image" src="https://github.com/user-attachments/assets/a65111fe-5d15-45ef-981c-f0abb9fe8596" />
+
+
+Query result.  
+
+As a result, a monthly financial summary table is generated, which can be used for:
+ - analyzing the effectiveness of paid search campaigns;
+ - calculating Return on Investment (ROI) and Return on Ad Spend (ROAS);
+ - building dashboards;
+ - financial and marketing analytics.
+
 
 
 ### SQL query 6: 
