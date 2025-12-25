@@ -8,7 +8,7 @@ This repository contains a number of practical tasks and analytical projects aim
   - [SQL query 2: Session analysis](#sql-query-2-session-analysis)
   - [SQL query 3: Daily Revenue & Advertising Cost](#sql-query-3-daily-revenue--advertising-cost)
   - [SQL query 4: Filtering active sessions with a subquery](#sql-query-4-filtering-active-sessions-with-a-subquery)
-  - [SQL query 5: Monthly Paid Search Cost vs Revenue](#sql-query-5-monthly-paid-search-cost-vs-revenue)
+  - [SQL query 5: Paid Search Traffic Performance Analysis](#sql-query-5-paid-search-traffic-performance-analysis)
 - [Skills Demonstrated](#skills-demonstrated)
 - [Tools Used](#tools-used)
 - [Contact](#contact)
@@ -180,7 +180,7 @@ This approach allows you to focus your analysis on the most engaged users and as
 
 The query can be extended to analyze other types of events, compare active and inactive sessions, or calculate the average number of views per session.
 
-### SQL query 5: Monthly Paid Search Cost vs Revenue
+### SQL query 5: Paid Search Traffic Performance Analysis
 [View a SQL query 5](https://docs.google.com/document/d/13FhsXUunZHguI2sCe2DpiUhbCJH0XSUDiNHOCSI9sqg/edit?usp=sharing)
 
 This SQL query in Google BigQuery aggregates monthly paid search spend and actual order revenue, combining data from multiple sources, including ad spend, Google Analytics events, and order and product data.
@@ -199,16 +199,19 @@ Table 1 shows the output of the query, including revenues and costs by year and 
 Table 1. - Revenues and Costs by Year and Month
 <img width="659" height="193" alt="image" src="https://github.com/user-attachments/assets/a65111fe-5d15-45ef-981c-f0abb9fe8596" />
 
-
 Query result.  
-
 As a result, a monthly financial summary table is generated, which can be used for:
  - analyzing the effectiveness of paid search campaigns;
  - calculating Return on Investment (ROI) and Return on Ad Spend (ROAS);
  - building dashboards;
  - financial and marketing analytics.
 
+Figure 1 shows the monthly cost of paid search compared to revenue.
+<img width="807" height="458" alt="image" src="https://github.com/user-attachments/assets/cf1cb031-bdea-4e89-9752-532f3c1c84c8" />
 
+Figure 1. Monthly cost of paid search compared to revenue.
+
+The dashboard shows a comparison of monthly paid search costs and revenue, allowing you to assess the profitability of the advertising campaign. The overall ROI was 53.94%, and the ROAS was 54.94%, indicating a positive return on investment. The graphs show fluctuations in costs and revenue by month. Notably, in January 2021, costs exceeded revenue, resulting in a reduced ROI of 41.13%. In contrast, in December 2020, the ROI reached 67.15% with stable revenue. The created visualization helps to quickly identify periods of effective and ineffective advertising for further budget optimization.
 
 ### SQL query 6: 
 [View a SQL query 6]()
