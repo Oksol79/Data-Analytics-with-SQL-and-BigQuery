@@ -129,11 +129,7 @@ Ad cost query block:
 Selects daily costs from the paid search cost table.
 Aggregates costs using SUM(cost).
 The UNION ALL operator joins both datasets.
-A type_table (Revenue, cost) column is added to the query to distinguish between revenue and cost. Graphs have also been built to visualize data on advertising revenue and costs. The resulting table with data (Table 1).  
-Table 1. - Daily revenue from products sold and daily advertising spend
-
-<img width="1031" height="640" alt="image" src="https://github.com/user-attachments/assets/9158d5a9-5d99-4b4b-aeea-29194daea09a" />
-
+A type_table (Revenue, cost) column is added to the query to distinguish between revenue and cost. Graphs have also been built to visualize data on advertising revenue and costs. 
 Data Analysis Graph – Daily Revenue and Ad Cost (Fig. 1).
 <img width="1031" height="664" alt="image" src="https://github.com/user-attachments/assets/038dd4d2-ce81-435b-8a3f-9b44db7cb677" />
 
