@@ -115,21 +115,27 @@ To increase the number of registrations and revenue, it is recommended to:
 [View a SQL query 3](https://docs.google.com/document/d/1ESbVJ_-_fNmBelrGhRFHCkBbp898t7lkD7CTmGVl3Qo/edit?usp=sharing)  
 
 This SQL query aggregates daily revenue from products sold and daily advertising spend from paid search campaigns, then combines both datasets into a single table ready for analytics.
+
 The purpose of this SQL query is to provide a single, daily view of business performance by combining two key metrics:
-Revenue which is calculated based on product prices associated with fulfilled orders.
-Advertising spend, which is collected from paid search spend reports.
+ - Revenue which is calculated based on product prices associated with fulfilled orders.
+ - Advertising spend, which is collected from paid search spend reports.
+
 This combined dataset is essential for analyzing company performance, calculating ROAS, marketing effectiveness, and tracking profitability trends over time.
 This query was created to demonstrate the work of operators UNION ALL and JOIN.
+
 Revenue query block:
-Joins the sessions, orders, and products tables.
-Matches sessions to orders via ga_session_id.
-Associates order products to get product prices.
-Calculates total daily revenue using SUM(price).
+ - Joins the sessions, orders, and products tables.
+ - Matches sessions to orders via ga_session_id.
+ - Associates order products to get product prices.
+ - Calculates total daily revenue using SUM(price).
+
 Ad cost query block:
-Selects daily costs from the paid search cost table.
-Aggregates costs using SUM(cost).
-The UNION ALL operator joins both datasets.
+ - Selects daily costs from the paid search cost table.
+ - Aggregates costs using SUM(cost).
+ - The UNION ALL operator joins both datasets.
+   
 A type_table (Revenue, cost) column is added to the query to distinguish between revenue and cost. Graphs have also been built to visualize data on advertising revenue and costs. 
+
 Data Analysis Graph – Daily Revenue and Ad Cost (Fig. 1).
 <img width="1031" height="664" alt="image" src="https://github.com/user-attachments/assets/038dd4d2-ce81-435b-8a3f-9b44db7cb677" />
 
