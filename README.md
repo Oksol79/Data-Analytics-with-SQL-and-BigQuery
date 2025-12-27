@@ -1,4 +1,4 @@
-# Data Analytics with SQL and BigQuery
+# Portfolio Project - Data Analytics with SQL and BigQuery
 Welcome to my portfolio of projects created to develop and demonstrate SQL and BigQuery skills.
 This repository contains a number of practical tasks and analytical projects aimed at obtaining, processing, analyzing, and interpreting data using SQL queries.
 
