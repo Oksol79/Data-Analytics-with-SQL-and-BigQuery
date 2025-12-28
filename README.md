@@ -1,4 +1,5 @@
 # Portfolio Project - Data Analytics with SQL and BigQuery
+
 Welcome to my portfolio of projects created to develop and demonstrate SQL and BigQuery skills.
 This repository contains a number of practical tasks and analytical projects aimed at obtaining, processing, analyzing, and interpreting data using SQL queries.
 
@@ -14,8 +15,8 @@ This repository contains a number of practical tasks and analytical projects aim
 - [Contact](#contact)
 
 ## Projects
-The project focused on analyzing e-commerce data within BigQuery using a dedicated database.
-The project developed a large number of SQL queries that were used to obtain new data sets, calculate basic metrics by account, etc. To demonstrate skills, various SQL operators were used to create queries, including CASE WHEN, views, CTE, UNION, and others.  
+The project focused on analyzing e-commerce data within BigQuery using a dedicated database.  
+The project developed a large number of SQL queries to obtain new datasets, calculate basic metrics by account, etc. To demonstrate skills, various SQL operators were used to create queries, including CASE WHEN, views, CTE, UNION, and others.    
 Diagram of relationships between tables in the database shown in Fig. 1.
 
 <img width="1613" height="1080" alt="DB_diagram" src="https://github.com/user-attachments/assets/ec1cba86-6422-4585-b6ef-639c3ff4783f" />  
@@ -56,14 +57,14 @@ The SQL query results contain a set of grouping fields that cover categorical va
  - rank_total_country_account_cnt – country ranking by the number of accounts created;
  - rank_total_country_sent_cnt – country ranking by the number of emails sent.
 
-To maintain the uniqueness of the sections and avoid conflicts due to different logic of using the date field, metrics for accounts and emails were calculated separately.
-The query result is shown in the table (Table 1).  
+To maintain the uniqueness of the sections and avoid conflicts arising from different date-field logic, metrics for accounts and emails were calculated separately.  
+The query result is shown in the table (Table 1).    
 Table 1. - Email Analytics and Account Dynamics
 
  <img width="1031" height="507" alt="image" src="https://github.com/user-attachments/assets/971dd17e-8b9f-41d5-a6c9-bfc63ad41193" />
 
 
-A visualization has been created in Looker Studio that shows the total values by country for the following fields: account_cnt, total_country_sent_cnt, rank_total_country_account_cnt, and rank_total_country_sent_cnt.  
+A visualization in Looker Studio shows the total values by country for the following fields: account_cnt, total_country_sent_cnt, rank_total_country_account_cnt, and rank_total_country_sent_cnt.    
 The graph in Fig. 1 shows the dynamics by date for the sent_msg field.
 
  <img width="1031" height="687" alt="image" src="https://github.com/user-attachments/assets/ec7246d8-f6c6-48e9-b69b-7cd456e71b3e" />
@@ -76,7 +77,7 @@ Fig. 1. The dynamics by date for the sent_msg field.
 This query was created to analyze all sessions during which purchases were made.   
 Using the query, you can determine:
 1. Was the session associated with registered users?
-To achieve this, CASE WHEN created two categories: registered (for a user with an account) and guest (for a user without an account).
+To achieve this, CASE WHEN created two categories: registered (for users with accounts) and guest (for users without accounts).
 2. All purchases by device type. To find this out, the data is aggregated separately for mobile and desktop.
 3. Calculate revenue by:
    - total revenue from all sessions;
@@ -86,11 +87,12 @@ To achieve this, CASE WHEN created two categories: registered (for a user with a
 5. Calculates the average revenue per session, in particular:
    - average check from registered users;
    - average check from unregistered users.
-This allows you to answer the question: Do registered users generate more revenue on average per session?
+This allows you to answer the question: Do registered users generate more revenue per session on average?
 6. The number of sessions of each type (with and without an account), which helps to assess the traffic structure.
 
-The results of the query yielded the data shown in Table 1.
+The query results yielded the data shown in Table 1.  
 Table 1. - Data about registered users and unregistered users 
+
 <img width="1188" height="458" alt="image" src="https://github.com/user-attachments/assets/bc6e46a8-4611-4393-894f-6d07fecf198c" />
 
 A visualization of session analysis for registered and unregistered users is shown in Fig. 1.
@@ -99,10 +101,10 @@ A visualization of session analysis for registered and unregistered users is sho
 
 Fig. 1. Sessions by Device Type
 
-Business conclusion. 
-The results show that Desktop generates the highest number of sessions among all devices. Desktop also brings in the highest revenue among both registered and unregistered users (guests). This means that the desktop audience is the most active and solvent.
-Registered users bring in significantly more revenue on desktop compared to other devices. In addition, revenue from registered users is significantly higher than from guests on any device.
-On mobile, the difference between registered and guests is also noticeable, although smaller than on desktop. Mobile generates a significant volume of sessions, but brings in less revenue, which indicates a lower conversion rate or a lower average check.
+Business conclusion.   
+The results show that Desktop generates the most sessions among all devices. Desktop also brings in the highest revenue among both registered and unregistered users (guests). This means that the desktop audience is the most active and solvent.  
+Registered users generate significantly more revenue on desktop than on other devices. In addition, revenue from registered users is significantly higher than from guests on any device.  
+On mobile, the difference between registered and guest users is also noticeable, though smaller than on desktop. Mobile generates a significant volume of sessions but brings in less revenue, indicating a lower conversion rate or a lower average check.  
 Tablet has a very low volume of sessions and revenue, so it can be ignored when making strategic product and marketing decisions.
 
 So, registration directly correlates with high revenue - it is worth increasing the share of users who create an account.
@@ -114,14 +116,14 @@ To increase the number of registrations and revenue, it is recommended to:
 ### SQL query 3: Daily Revenue & Advertising Cost
 [View a SQL query 3](https://docs.google.com/document/d/1ESbVJ_-_fNmBelrGhRFHCkBbp898t7lkD7CTmGVl3Qo/edit?usp=sharing)  
 
-This SQL query aggregates daily revenue from products sold and daily advertising spend from paid search campaigns, then combines both datasets into a single table ready for analytics.
+This SQL query aggregates daily revenue from product sales and daily advertising spend from paid search campaigns, then combines the datasets into a single table ready for analytics.
 
 The purpose of this SQL query is to provide a single, daily view of business performance by combining two key metrics:
- - Revenue which is calculated based on product prices associated with fulfilled orders.
+ - Revenue, which is calculated based on product prices associated with fulfilled orders.
  - Advertising spend, which is collected from paid search spend reports.
 
-This combined dataset is essential for analyzing company performance, calculating ROAS, marketing effectiveness, and tracking profitability trends over time.
-This query was created to demonstrate the work of operators UNION ALL and JOIN.
+This combined dataset is essential for analyzing company performance, calculating ROAS, marketing effectiveness, and tracking profitability trends over time.  
+This query was created to demonstrate the functionality of the UNION ALL and JOIN operators.
 
 Revenue query block:
  - Joins the sessions, orders, and products tables.
@@ -143,16 +145,16 @@ Fig. 1. Daily Revenue and Ad Cost over time.
 
 The resulting graph "Daily Revenue & Advertising Cost" shows the daily dynamics of advertising revenue and costs for the period from November 1, 2020, to January 24, 2021.
 The results graph assesses the effectiveness of advertising risks and business profitability, for example, the level of revenue to costs, and trends.
-When you analyze the entire return on costs, you see whether advertising brings the expected result.
+When you analyze the entire return on investment, you see whether advertising delivers the expected results.  
 Regarding trends, the graph allows you to assess specific relationships, such as whether revenue increases with rising advertising costs or remains steady despite changes in costs.
 If revenue is growing and costs remain stable, this is a sign of an effective strategy.
 
 ### SQL query 4: Filtering active sessions with a subquery
 [View a SQL query 4](https://docs.google.com/document/d/1ArgemVRPK9N3Mg-elkdBGjgQaxJ-G7Hlt3ZNCwcA4Is/edit?usp=drive_web&ouid=104269468961255412319)  
 
-This query uses a subquery with a JOIN in BigQuery to identify sessions that have more than three events.
-The subquery groups all events by `ga_session_id` and selects only those sessions that have more than three events.
-The main query then joins these sessions back to the main table and counts only the `page_view` events that occurred within those sessions.
+This query uses a subquery with a JOIN in BigQuery to identify sessions with more than 3 events.  
+The subquery groups events by `ga_session_id` and selects only sessions with more than 3 events.  
+The main query then joins these sessions back to the main table and counts only the `page_view` events that occurred within those sessions.  
 
 The subquery is used to identify sessions with high user activity:
 
@@ -163,8 +165,8 @@ SELECT
     GROUP BY ga_session_id  
     HAVING COUNT(*) > 3  
 
-In it, all events from the event_params table are grouped by the ga_session_id field, after which the total number of events within each session is counted. The HAVING COUNT(*) > 3 condition selects only those sessions in which more than three events occurred.
-Thus, the subquery forms a list of ga_session_id only for "active" sessions (sessions with a high level of interaction).
+In it, all events from the event_params table are grouped by the ga_session_id field, and the total number of events per session is then counted. The HAVING COUNT(*) > 3 condition selects only those sessions in which more than three events occurred.  
+Thus, the subquery returns a list of ga_session_id values only for "active" sessions (sessions with high interaction).  
 
 Then the main query:
 - joins these active sessions using JOIN;
@@ -180,24 +182,24 @@ This approach allows you to focus your analysis on the most engaged users and as
 - JOINs;
 - event-based analytics.
 
-The query can be extended to analyze other types of events, compare active and inactive sessions, or calculate the average number of views per session.
+The query can be extended to analyze other event types, compare active and inactive sessions, or calculate the average number of views per session.
 
 ### SQL query 5: Paid Search Traffic Performance Analysis
 [View a SQL query 5](https://docs.google.com/document/d/13FhsXUunZHguI2sCe2DpiUhbCJH0XSUDiNHOCSI9sqg/edit?usp=sharing)
 
 This SQL query in Google BigQuery aggregates monthly paid search spend and actual order revenue, combining data from multiple sources, including ad spend, Google Analytics events, and order and product data.
-The query enables you to compare ad spend with revenue by year and month, even if only one side (ad spend or revenue) is available for individual months. To correctly display time periods, the SQL function COALESCE() is used, which returns the first non-NULL value and ensures that the results are correctly combined after a FULL OUTER JOIN.
+The query enables you to compare ad spend with revenue by year and month, even if only one side (ad spend or revenue) is available for a given month. To correctly display time periods, the SQL function COALESCE() is used, which returns the first non-NULL value and ensures that the results are correctly combined after a FULL OUTER JOIN.
 
 Query Logic:
 
 1. Aggregation of marketing costs.  
 In this part of the query, the year and month are extracted from the cost date, and the paid search costs are aggregated at the monthly level. The prepared data is used for further analysis.
 2. Revenue calculation.  
-Here, event-level data is converted into a monthly aggregation by combining Google Analytics events, orders, and products. The total revenue for each month is calculated.
+Here, event-level data is aggregated monthly by combining Google Analytics events, orders, and products. The total revenue for each month is calculated.  
 3. Data alignment.  
 Costs and revenue are combined using a FULL OUTER JOIN, which allows you to save all months in the result, even if data from one source is missing. The COALESCE function is used to correctly align time dimensions.
 
-Table 1 shows the output of the query, including revenues and costs by year and month.
+Table 1 shows the query output, including revenues and costs by year and month.  
 Table 1. - Revenues and Costs by Year and Month
 <img width="659" height="193" alt="image" src="https://github.com/user-attachments/assets/a65111fe-5d15-45ef-981c-f0abb9fe8596" />
 
@@ -213,7 +215,7 @@ Figure 1 shows the monthly cost of paid search compared to revenue.
 
 Figure 1. Monthly cost of paid search compared to revenue.
 
-The dashboard shows a comparison of monthly paid search costs and revenue, allowing you to assess the profitability of the advertising campaign. The overall ROI was 53.94%, and the ROAS was 54.94%, indicating a positive return on investment. The graphs show fluctuations in costs and revenue by month. Notably, in January 2021, costs exceeded revenue, resulting in a reduced ROI of 41.13%. In contrast, in December 2020, the ROI reached 67.15% with stable revenue. The created visualization helps to quickly identify periods of effective and ineffective advertising for further budget optimization.
+The dashboard shows a comparison of monthly paid search costs and revenue, enabling you to assess the campaign's profitability. The overall ROI was 53.94%, and the ROAS was 54.94%, indicating a positive return on investment. The graphs show fluctuations in costs and revenue by month. Notably, in January 2021, costs exceeded revenue, resulting in a 41.13% reduction in ROI. In contrast, in December 2020, the ROI reached 67.15% with stable revenue. The created visualization helps to quickly identify periods of effective and ineffective advertising for further budget optimization.  
 
 ### SQL query 6: 
 [View a SQL query 6]()
@@ -224,7 +226,7 @@ The dashboard shows a comparison of monthly paid search costs and revenue, allow
 3. Aggregating and Transforming Event-Level Data
 4. Working with Time Dimensions (Year / Month)
 5. Combining Data from Multiple Sources
-6. Processing Incomplete Data (INNER JOIN, LEFT LOIN, FULL OUTER JOIN)
+6. Processing Incomplete Data (INNER JOIN, LEFT JOIN, FULL OUTER JOIN)
 
 ## Tools Used
 1. SQL (BigQuery)
@@ -233,4 +235,4 @@ The dashboard shows a comparison of monthly paid search costs and revenue, allow
    
 ## Contact
 Feel free to connect with me via LinkedIn:  
-https://www.linkedin.com/in/oksana-olar-993709162/
+https://www.linkedin.com/in/oksana-olar/
