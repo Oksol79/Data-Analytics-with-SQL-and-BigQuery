@@ -10,7 +10,7 @@ This repository contains a number of practical tasks and analytical projects aim
   - [SQL query 3: Daily Revenue & Advertising Cost](#sql-query-3-daily-revenue--advertising-cost)
   - [SQL query 4: Filtering active sessions with a subquery](#sql-query-4-filtering-active-sessions-with-a-subquery)
   - [SQL query 5: Paid Search Traffic Performance Analysis](#sql-query-5-paid-search-traffic-performance-analysis)
-  - [SQL query 6: Paid Search Traffic Performance Analysis](#sql-query-5-paid-search-traffic-performance-analysis)
+  - [SQL query 6: Email Sending Distribution by Account and Month](#sql-query-6-email-sending-distribution-by-account-and-month)
 - [Skills Demonstrated](#skills-demonstrated)
 - [Tools Used](#tools-used)
 - [Contact](#contact)
@@ -201,7 +201,9 @@ Here, event-level data is aggregated monthly by combining Google Analytics event
 Costs and revenue are combined using a FULL OUTER JOIN, which allows you to save all months in the result, even if data from one source is missing. The COALESCE function is used to correctly align time dimensions.
 
 Table 1 shows the query output, including revenues and costs by year and month.  
-Table 1. - Revenues and Costs by Year and Month
+
+Table 1. - Revenues and Costs by Year and Month  
+
 <img width="659" height="193" alt="image" src="https://github.com/user-attachments/assets/a65111fe-5d15-45ef-981c-f0abb9fe8596" />
 
 Query result.  
@@ -211,14 +213,15 @@ As a result, a monthly financial summary table is generated, which can be used f
  - building dashboards;
  - financial and marketing analytics.
 
-Figure 1 shows the monthly cost of paid search compared to revenue.
-<img width="807" height="458" alt="image" src="https://github.com/user-attachments/assets/cf1cb031-bdea-4e89-9752-532f3c1c84c8" />
+Figure 1 shows the monthly cost of paid search compared to revenue.  
+
+<img width="807" height="458" alt="image" src="https://github.com/user-attachments/assets/cf1cb031-bdea-4e89-9752-532f3c1c84c8" />  
 
 Figure 1. Monthly cost of paid search compared to revenue.
 
 The dashboard shows a comparison of monthly paid search costs and revenue, enabling you to assess the campaign's profitability. The overall ROI was 53.94%, and the ROAS was 54.94%, indicating a positive return on investment. The graphs show fluctuations in costs and revenue by month. Notably, in January 2021, costs exceeded revenue, resulting in a 41.13% reduction in ROI. In contrast, in December 2020, the ROI reached 67.15% with stable revenue. The created visualization helps to quickly identify periods of effective and ineffective advertising for further budget optimization.  
 
-### SQL query 6: 
+### SQL query 6: Email Sending Distribution by Account and Month
 [View a SQL query 6]()
 
 This SQL query analyzes email activity by account and month.
