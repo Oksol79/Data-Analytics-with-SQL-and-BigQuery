@@ -222,7 +222,7 @@ Figure 1. Monthly cost of paid search compared to revenue.
 The dashboard shows a comparison of monthly paid search costs and revenue, enabling you to assess the campaign's profitability. The overall ROI was 53.94%, and the ROAS was 54.94%, indicating a positive return on investment. The graphs show fluctuations in costs and revenue by month. Notably, in January 2021, costs exceeded revenue, resulting in a 41.13% reduction in ROI. In contrast, in December 2020, the ROI reached 67.15% with stable revenue. The created visualization helps to quickly identify periods of effective and ineffective advertising for further budget optimization.  
 
 ### SQL query 6: Email Sending Distribution by Account and Month
-[View a SQL query 6]()
+[View a SQL query 6](https://docs.google.com/document/d/1HHUEueIWZs8scZxws5Svp7LhEoW28keuvlxI3UAnfsQ/edit?usp=sharing)
 
 This SQL query analyzes email activity by account and month.
 The query performs data aggregation and analytical calculations using window functions (SUM(COUNT(*)) OVER), as well as date processing and formatting.
