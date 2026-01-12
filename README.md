@@ -10,6 +10,7 @@ This repository contains a number of practical tasks and analytical projects aim
   - [SQL query 3: Daily Revenue & Advertising Cost](#sql-query-3-daily-revenue--advertising-cost)
   - [SQL query 4: Filtering active sessions with a subquery](#sql-query-4-filtering-active-sessions-with-a-subquery)
   - [SQL query 5: Paid Search Traffic Performance Analysis](#sql-query-5-paid-search-traffic-performance-analysis)
+  - [SQL query 6: Paid Search Traffic Performance Analysis](#sql-query-5-paid-search-traffic-performance-analysis)
 - [Skills Demonstrated](#skills-demonstrated)
 - [Tools Used](#tools-used)
 - [Contact](#contact)
@@ -219,6 +220,34 @@ The dashboard shows a comparison of monthly paid search costs and revenue, enabl
 
 ### SQL query 6: 
 [View a SQL query 6]()
+
+This SQL query analyzes email activity by account and month.
+The query performs data aggregation and analytical calculations using window functions (SUM(COUNT(*)) OVER), as well as date processing and formatting.
+
+The SQL query calculates the share of emails sent to each account in each month as a percentage of the total number of emails for that month, and also determines for each account the date of the first and last email sent within the month.  
+The main functions of the SQL query are described below.  
+
+1. Combining data from three tables:
+ - email_sent - information about email sending events;
+ - account_session - the relationship between accounts and sessions;
+ - session - the base date of the session.
+ 
+2. Calculating the actual date of sending the email based on the session date and the offset in days.
+
+3. Grouping data by:
+ - account_id;
+ - month of sending (YYYY-MM).
+
+4. For each account within the month:
+ - calculates the share (%) of emails sent by this account out of the total number for the month;
+ - determines the first and last date of sending the email in this month.
+
+As a result, the SQL query allows you to:
+ - estimate the contribution of each account to the total email traffic by month;
+ - identify accounts with high or low activity;
+ - Analyze the time frames of email activity for each account
+
+
 
 ## Skills Demonstrated
 1. SQL for Analytics in Google BigQuery
